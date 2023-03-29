@@ -21,7 +21,7 @@ lyxTalk.init("IvW3T1NjMoh7OmKEdAz1tM0o-gzGzoHsz",
   </script>
 <script>
   function doSpeaks() {
-  document.title = '说说 | Ariasakaの小窝'; 
+  //document.title = '说说 | chengzi的blog'; 
 bbtalk.init({
   appId: "",
   appKey: "",

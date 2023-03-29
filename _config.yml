@@ -42,11 +42,11 @@ skip_render:
   - noie.html
   - config.yaml
 # hexo-admin authentification
-admin:
-  username: lyx2010official@outlook.com
-  password_hash: $2a$10$p56ewYLefBOSngc29q47auoW9.v76ds3LZFON80z5C9CvZYX9vfO.
-  secret: f_G01145141919810ldDrS250=_=(~_~):(
-  deployCommand: '/admin_script.bat'
+#admin:
+  #username: lyx2010official@outlook.com
+ # password_hash: $2a$10$p56ewYLefBOSngc29q47auoW9.v76ds3LZFON80z5C9CvZYX9vfO.
+  #secret: f_G01145141919810ldDrS250=_=(~_~):(
+  #deployCommand: '/admin_script.bat'
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -125,7 +125,7 @@ search:
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   - type: git
-    repo: https://github.com/lyxofficial/pjaxtest.git
+    repo: #https://github.com/lyxofficial/pjaxtest.git
     branch: main
 live2d:
   enable: false
@@ -198,9 +198,9 @@ feed:
   limit: false
 bangumi:
   enable: true 
-  vmid: 369280472
+  vmid: 397822180
   title: '追番列表'
-  quote: '君指先跃动の光は，私の一生不变の信仰に，唯私の超电磁砲永世生き！'
+  quote: '最近都没时间看番了'
   show: 1
   loading: '/assets/douban-loading.gif'
 
@@ -211,9 +211,9 @@ hexo_submit_urls_to_search_engine:
   google: 0
   bing: 1 
   baidu: 0
-  txt_path: submit_urls.txt
-  bing_host: https://yisous.xyz
-  bing_token: 5387b0d0a57442f8814d5650744280b1
+  txt_path: #submit_urls.txt
+  bing_host: #https://yisous.xyz
+  bing_token: # 5387b0d0a57442f8814d5650744280b1
   replace: 0
 # wowjs:
 #   enable: true #控制动画开关。true是打开，false是关闭

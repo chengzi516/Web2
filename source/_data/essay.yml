@@ -1,0 +1,12 @@
+- class_name: 即刻短文
+  essay_list:
+    - content: 好吧雅思确实很难，我得承认
+      date: 2023/3/15
+     # link: https://anzhiy.cn/album/
+    - content: 这里抄抄，那里改改，终于把blog做完了
+      date: 2023/3/18 08:00:00
+      #from: 安知鱼
+    - content: emm为什么都是报红？
+      date: 2023/3/20 10:00:00
+      #image:
+        #- https://img02.anzhiy.cn/adminuploads/1/2022/10/23/6354ea92960ef.webp

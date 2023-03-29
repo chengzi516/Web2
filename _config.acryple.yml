@@ -19,8 +19,8 @@ menu:
     #留言板: /messageboard/ || fa fa-blackboard
   #我的 || fa-fw fas fa-address-card:
     #电影: /movies/ || fa fa-photo-video
-    #追番: /bangumis/ || fa-fw fas fa fa-film
-    # 音乐: /musics/ || fa fa-music
+  追番: /bangumis/ || fa-fw fas fa fa-film
+  #音乐: /musics/ || fa fa-music
   #关于: /about/ || fa fa-info-circle
     #声明: /license/ || fas fa-balance-scale
   工具 || fa-fw fas fa-tools:
@@ -110,7 +110,7 @@ favicon: https://imgbed.link/file/15435
 
 # Avatar (頭像)
 avatar:
-  img: /img/a.webp
+  img: /img/avatar.jpg
   effect: false
 
 # Disable all banner image
@@ -322,19 +322,19 @@ livere:
 # gitalk
 # https://github.com/gitalk/gitalk
 gitalk:
-  client_id: e9c8a4c42b9bd57da9d9
-  client_secret: 51b45e474eaf45a0b89f25e081da82a69fd47a09
-  repo: LYXOfficial.github.io
-  owner: LYXOfficial
-  admin: LYXOfficial
-  option:
+  #client_id: e9c8a4c42b9bd57da9d9
+  #client_secret: 51b45e474eaf45a0b89f25e081da82a69fd47a09
+  #repo: LYXOfficial.github.io
+  #owner: LYXOfficial
+  #admin: LYXOfficial
+  #option:
 
 # valine
 # https://valine.js.org
 valine:
-  appId: J0o2mjEVAAO3ex2gUiLca2l1-gzGzoHsz
-  appKey: 9XziAHn9NKVdUHAxteOTTQbi
-  avatar: monsterid # gravatar style https://valine.js.org/#/avatar
+  appId: #J0o2mjEVAAO3ex2gUiLca2l1-gzGzoHsz
+  appKey: #9XziAHn9NKVdUHAxteOTTQbi
+  avatar: #monsterid # gravatar style https://valine.js.org/#/avatar
   serverURLs: # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
   bg: # valine background
   visitor: false
@@ -370,10 +370,10 @@ facebook_comments:
 # Twikoo
 # https://github.com/imaegoo/twikoo
 twikoo:
-  envId: https://yourapi.example.com/
-  region:
-  visitor: false
-  option:
+  #envId: https://yourapi.example.com/
+  #region:
+  #visitor: false
+  #option:
 
 # Giscus
 # https://giscus.app/
@@ -880,6 +880,7 @@ css_prefix: true
 # # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
   head:
+  - <link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper-anzhiyu@1.0.4/lib/swiper.min.css">
   - <link rel="stylesheet" href="/css/ariasakablog.css">
   - <link id="css" rel="stylesheet" href="/css/stylessimple.css">
   - <link rel="stylesheet" href="/css/iconfont.css">
@@ -903,6 +904,8 @@ inject:
   - <script src="https://cdn1.tianli0.top/npm/prefetch-page"></script>
   - "<script>addEventListener('DOMContentLoaded', function () {prefetch({ threshold: 25, delay: 3000, limit: 10 ,customs: ['search.xml']})});requestIdleCallback(function () {prefetch({ threshold: 25, delay: 3000, limit: 10,customs: ['search.xml']})})</script>"
   bottom:
+  - <script data-pjax src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/js/swiper.min.js"></script>
+  - <script async data-pjax src="/js/jikeduanwen.js"></script>
   - <script type="text/javascript" src="/js/fixbugpjax.js"></script>
   - <script src="/js/sakura.js"></script>
  # - <div class="aplayer no-destroy" data-id="7803928554" data-server="netease" data-type="playlist" data-listFolded="false" data-preload="metadata" data-theme="var(--lyx-theme)" data-fixed="true" data-autoplay="false" data-volume=0.1 style="z-index:514"> </div>

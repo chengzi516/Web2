@@ -102,7 +102,9 @@ void PreOrder(btnode* root) {
     PreOrder(root->right);
 }
 ```
-##　👨‍👩‍👧‍👦中序与后序遍历
+
+
+## 👨‍👩‍👧‍👦中序与后序遍历
 有了前序的基础，中序和后序也是找猫画虎即可。
 中序的遍历规则就是：`先遍历左子树，再访问根节点，最后遍历右子树`。
 后序的遍历规则就是：`先遍历左子树，再遍历右子树，最后访问根节点`。
@@ -247,6 +249,7 @@ bool isSameTree(struct TreeNode* p, struct TreeNode* q){
       return isSameTree(p->left,q->left) && isSameTree(p->right,q->right);
 }
 ```
+
 ## 👩‍👧‍👦翻转二叉树
 给你一棵二叉树的根节点 root ，翻转这棵二叉树，并返回其根节点。
 示例 1：

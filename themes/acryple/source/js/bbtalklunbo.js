@@ -1,7 +1,7 @@
 
 AV.init({
-    appId: "",
-    appKey: "",
+    appId: "SrlqrluKUUAcSWRGFUf4gNSE-MdYXbMMI",
+    appKey: "Jm3U7cjykNIjPPknOAyGdJUp",
     serverURL: ""
 });
 function lunbo(){
