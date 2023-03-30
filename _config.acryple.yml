@@ -10,6 +10,7 @@ menu:
     分类: /categories/ || fas fa-folder-open
     标签: /tags/ || fas fa-tags
   github: https://github.com/chengzi516  ||   fab fa-github
+  ChatGpt: https://chat.forchange.cn/ ||  fa fa-toggle-on
   #本站 || fa fa-sitemap:
     #说说: /speaks/ || fa fa-comments
     #友链: /links/ || fas fa-link
