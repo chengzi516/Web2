@@ -5729,7 +5729,6 @@ transform: translateY(5px);}
     --anzhiyu-card-border: #42444a;
   }
 
-
   #page:has(#essay_page) {
     border: 0;
     box-shadow: none !important;
@@ -6008,7 +6007,7 @@ transform: translateY(5px);}
     box-shadow: var(--anzhiyu-shadow-lightblack);
     display: flex;
     transition: all 0.3s ease 0s;
-    margin: 1rem auto 0;
+    margin: 0.5rem auto 0.5rem;
     border: var(--style-border);
     align-items: center;
     height: 50px;
