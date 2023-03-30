@@ -11,6 +11,7 @@ menu:
     标签: /tags/ || fas fa-tags
   github: https://github.com/chengzi516  ||   fab fa-github
   ChatGpt: https://chat.forchange.cn/ ||  fa fa-toggle-on
+  图床: https://smms.app/ || fa fa-camera
   #本站 || fa fa-sitemap:
     #说说: /speaks/ || fa fa-comments
     #友链: /links/ || fas fa-link
@@ -20,7 +21,7 @@ menu:
     #留言板: /messageboard/ || fa fa-blackboard
   #我的 || fa-fw fas fa-address-card:
     #电影: /movies/ || fa fa-photo-video
-  追番: /bangumis/ || fa-fw fas fa fa-film
+  #追番: /bangumis/ || fa-fw fas fa fa-film
   #音乐: /musics/ || fa fa-music
   #关于: /about/ || fa fa-info-circle
     #声明: /license/ || fas fa-balance-scale
