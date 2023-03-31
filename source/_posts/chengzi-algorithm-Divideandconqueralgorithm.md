@@ -3,6 +3,9 @@ title: 【算法】链式二叉树里的遍历与分治思想
 cover: https://imgbed.link/file/19941
 tags:
 - 算法
+- 二叉树
+- 分治
+- c语言
 swiper_index: 8
 categories: 
 - 算法 

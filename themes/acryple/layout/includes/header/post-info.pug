@@ -122,9 +122,5 @@
               a(href=url_for(page.path) + '#post-comment')
                 span.fb-comments-count(data-href=urlNoIndex())
       span.post-meta-separator |&nbsp 
-        span.post-meta-dianzan
-          if theme.wordcount.post_wordcount
-            a(href="javascript:void(0)" class="dianzan"  onclick="dianzan()")
-              i.fas.fa-thumbs-up
-            span.post-meta-label= _p(' 点赞') + ':'
-            span.dianzan-count=0
+        
+          

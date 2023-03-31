@@ -10,7 +10,7 @@ menu:
     分类: /categories/ || fas fa-folder-open
     标签: /tags/ || fas fa-tags
   github: https://github.com/chengzi516  ||   fab fa-github
-  ChatGpt: https://chat.forchange.cn/ ||  fa fa-toggle-on
+  ChatGpt: https://pandapy.com/ ||  fa fa-toggle-on
   图床: https://smms.app/ || fa fa-camera
   #本站 || fa fa-sitemap:
     #说说: /speaks/ || fa fa-comments
@@ -732,7 +732,7 @@ runtimeshow:
 
 # Aside widget - Newest Comments
 newest_comments:
-  enable: true
+  enable: false
   sort_order: # Don't modify the setting unless you know how it works
   limit: 6
   storage: 10 # unit: mins, save data to localStorage
@@ -783,7 +783,7 @@ rightside_item_order:
 
 # medium-zoom
 # https://github.com/francoischalifour/medium-zoom
-medium_zoom: false
+medium_zoom: true
 
 # fancybox
 # https://fancyapps.com/fancybox/3/
