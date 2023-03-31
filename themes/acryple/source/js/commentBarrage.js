@@ -16,13 +16,13 @@ const commentBarrageConfig = {
 		['#000a!important','var(--lyx-white)'],
 	],
 	//同时最多显示弹幕数
-	maxBarrage: 1,
+	maxBarrage: 0,
 	//弹幕显示间隔时间，单位ms
 	barrageTime: 3000,
 	//twikoo部署地址（Vercel、私有部署），腾讯云的为环境ID
-	twikooUrl: "https://tkapi.yisous.xyz",
+	twikooUrl: //"https://tkapi.yisous.xyz",
 	//token获取见前文
-	accessToken: "1059857c25a2ce9fba9cff298f4f33ee",
+	accessToken: //"1059857c25a2ce9fba9cff298f4f33ee",
 	pageUrl: window.location.pathname,
 	barrageTimer: [],
 	barrageList: [],
@@ -31,9 +31,9 @@ const commentBarrageConfig = {
 	noAvatarType: "retro",
 	dom: document.querySelector('.comment-barrage'),
 	//是否默认显示留言弹幕
-	displayBarrage: true,
+	displayBarrage: false,
 	//头像cdn，默认cravatar
-	avatarCDN: "cravatar.cn",
+	avatarCDN:// "cravatar.cn",
 }
 function checkURL(URL){
 	var str=URL;
