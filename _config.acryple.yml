@@ -1034,9 +1034,9 @@ categoryBar:
     - black
     - black
     - black
-    - rgba(12, 135, 235,0.6)
-    - '#425aef88'
-    - '#ed709b88'
+    - black
+    - black
+    - black
 
 # tag-plugins-plus
 # see https://akilar.top/posts/615e2dec/
