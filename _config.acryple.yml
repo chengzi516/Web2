@@ -29,6 +29,7 @@ menu:
     小空调: /kongtiao/ ||   fa fa-gavel
         #每日早报: /zaobao/ || fa fa-newspaper
     木鱼: /muyu/ || fa fa-cog
+  分站: https://taylor516.github.io/ || fa fa-share  
   #线路 || fas fa-link:
     #Vercel: https://yisous.xyz
     #Vercel2: https://vercel.yisous.xyz
