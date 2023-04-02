@@ -3,6 +3,7 @@ title: 【c】简述内存中数据如何存储？动态内存该如何分配？
 cover: https://imgbed.link/file/19736
 tags:
   - c语言
+  - 动态内存分配
 abbrlink: f2154748
 date: 2023-03-03 09:55:42
 categories: 

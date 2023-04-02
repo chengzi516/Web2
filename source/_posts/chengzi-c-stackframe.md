@@ -3,6 +3,7 @@ title: 【c】为啥有时传参要传指针？实参形参到底是个啥？栈
 cover: https://imgbed.link/file/17551
 tags:
   - c语言
+  - 指针
 abbrlink: 849012c6
 date: 2023-03-01 20:25:20
 categories: 

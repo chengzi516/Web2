@@ -3,6 +3,7 @@ title: 【c】关于指针，你应该知道这些
 cover: https://imgbed.link/file/19538
 tags:
   - c语言
+  - 指针
 abbrlink: 98c603a
 swiper_index: 4
 date: 2023-03-01 19:59:25

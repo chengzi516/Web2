@@ -4,6 +4,7 @@ cover: https://imgbed.link/file/19737
 tags:
   - 算法
   - c++
+  - 排序
 abbrlink: ac898649
 swiper_index: 5
 categories: 
@@ -300,96 +301,4 @@ int main(){
 }
 ```
 
-
-## 😒对称二叉树
-给你一个二叉树的根节点 root ， 检查它是否轴对称。
-
-示例 1：
-
-<img src='https://assets.leetcode.com/uploads/2021/02/19/symtree1.jpg'>
-输入：root = [1,2,2,3,4,4,3]
-输出：true
-示例 2：
-<img src='https://assets.leetcode.com/uploads/2021/02/19/symtree2.jpg'>
-
-输入：root = [1,2,2,null,3,null,3]
-输出：false
-
-思路很简单，仍然是进行分治，不断往下比较。
-```c
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     struct TreeNode *left;
- *     struct TreeNode *right;
- * };
- */
-bool issame(struct TreeNode* t1,struct TreeNode* t2){
-    if(t1==NULL && t2==NULL)
-      return true;
-    else if(t1==NULL || t2==NULL)
-      return false;  
-    if(t1->val==t2->val)
-    return    issame(t1->left,t2->right) && issame(t1->right,t2->left);
-
-    return false;  
-    
-}
-bool isSymmetric(struct TreeNode* root){
-    if(root==NULL)
-      return true;
-    else 
-     return issame(root->left,root->right);
-}
-```
-
-## 🤡另一棵树的子树
-给你两棵二叉树 root 和 subRoot 。检验 root 中是否包含和 subRoot 具有相同结构和节点值的子树。如果存在，返回 true ；否则，返回 false 。
-
-二叉树 tree 的一棵子树包括 tree 的某个节点和这个节点的所有后代节点。tree 也可以看做它自身的一棵子树。
-
-示例 1：
-
-<img src='https://assets.leetcode.com/uploads/2021/04/28/subtree1-tree.jpg'>
-输入：root = [3,4,5,1,2], subRoot = [4,1,2]
-输出：true
-示例 2：
-
-<img src='https://assets.leetcode.com/uploads/2021/04/28/subtree2-tree.jpg'>
-输入：root = [3,4,5,1,2,null,null,null,null,0], subRoot = [4,1,2]
-输出：false
-
-```c
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     struct TreeNode *left;
- *     struct TreeNode *right;
- * };
- */
-//这里会用到之前一道判定两树是否相同的函数，不断往下遍历即可。
-bool issametree(struct TreeNode* tr1,struct TreeNode* tr2){
-       if(tr1==NULL&&tr2==NULL)
-         return true;
-       else if(tr1==NULL || tr2==NULL)
-          return false;
-       else if(tr1->val!=tr2->val)
-         return false;
-       else 
-     return issametree(tr1->left,tr2->left)&& issametree(tr1->right,tr2->right);
-}
-bool isSubtree(struct TreeNode* root, struct TreeNode* subRoot){
-       if(root==NULL)
-       return false;
-       
-       if(issametree(root,subRoot))
-         return true;
-        else if(root->left==NULL&&root->right==NULL)
-          return false;
-        else
-        return isSubtree(root->left,subRoot) || isSubtree(root->right,subRoot);
-}
-```
 
