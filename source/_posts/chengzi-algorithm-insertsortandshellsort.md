@@ -21,7 +21,6 @@ categories:
 就像是打牌一样，将手中的牌进行整理，按照一个顺序依次排好。
 思想清楚了就可以写代码了，先书写单趟的循环（这里写的是`升序`）。
 我们将每次`排好序的队列`的下标的`最后`一位定为`end`，那么需要往前插入的就是处在`end+1`的元素。将这个元素暂存在tmp中，并向前比较，遇到比他大的则依次`向后放`。
-
 ```c
 int end;
 	int tmp = a[end + 1];
@@ -37,7 +36,6 @@ int end;
 	a[end + 1] = tmp;
 ```
 要想对整个数列进行排序，就需要对end做出相应的变化。
-
 ```c
 void insertsort(int* a, int asize) {
 	for (int i = 1; i < asize; i++) {
@@ -69,10 +67,9 @@ void insertsort(int* a, int asize) {
 相比于初始数列，会发现其变的`基本有序`，此时再对整个数组进行插入排序，就会减少很多的运算量。
 但需要注意的是希尔排序是一种`不稳定的排序`，因为预排序的结果是不可控的。
 即其算法思想为：`先进行多组预排序，最后执行插入排序`。
-<img src='https://img-blog.csdnimg.cn/14642c0b17cc41a496c808ed6214b234.gif#pic_center'>
-[图源此处](https://blog.csdn.net/Hell_potato777/article/details/113698046)
+<img src='https://pic.leetcode-cn.com/1630914539-YCEFCI-file_1630914537571'>
+[图源此处](https://leetcode.cn/circle/article/0akb5U/)
 还是先书写`单趟`的排序。其本质与插排是一样的，所以只需要更改几个地方即可。
-
 ```c
     int end;
 	int gap;
@@ -94,7 +91,6 @@ void insertsort(int* a, int asize) {
 我们可以选择进行`多次多趟`的预排序，让`gap=asize`，之后不断`gap/=2`，在不断的预排序过程中就会使得数列接近有序，同时最终`gap会等于1`，此时等同于对一个接近有序的数列进行插入排序。
 在进行排序的过程中，可以选择多组排序同时进行的方式，这样代码会显得会更加简洁。也就是同样的gap时，对队列中的所有分组进行预排序，实现也非常简单，让i循环时`+1`而非+gap即可。
 那么代码的实现如下：
-
 ```c
 void shellsort(int* a, int asize) {
 	int gap = asize;
@@ -117,4 +113,10 @@ void shellsort(int* a, int asize) {
 	}
 }
 ```
+但希尔排序并非是一种稳定的排序，也因为gap的计算方式五花八门，所以其时间复杂度是存在变数的。此处的gap计算方式遵循`Knuth`提出的算法，gap=[gap/3]+1，且在Kunth的大量实验统计下，其时间复杂度在
+$$
+ O(n^{1.25})到O(1.6n^{1.25})
+ $$
+ 这个区间内。
+
 
