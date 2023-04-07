@@ -24,6 +24,7 @@ date: 2023-03-21 21:44:28
 若将和此次序列对应的一维数组（即以一维数组作此序列的存储结构）看成是一个完全二叉树，则堆的含义表明，完全二叉树中所有非终端结点的值均不大于（或不小于）其左、右孩子结点的值。由此，若序列{k1,k2,…,kn}是堆，则堆顶元素（或完全二叉树的根）必为序列中n个元素的最小值（或最大值）。
 <img src='https://www.runoob.com/wp-content/uploads/2020/09/heap-01.png'>
 （以上源自百度百科）
+
 堆的定义如下：n个元素的序列{k1,k2,ki,…,kn}当且仅当满足下关系时，称之为堆。
 $$ 
 k_i<=k_{2*i+1}且k_i<=k_{2*i+2} 
@@ -141,6 +142,7 @@ void adjustdown(int* arr, int parent,int n) {
 
 ## 🥅堆删除（pop）
 先给出一个判断堆是否为空的函数，方便后面进行断言
+
 ```c
 bool heapempty(heap* hp)
 {
@@ -148,7 +150,9 @@ bool heapempty(heap* hp)
 	return hp->size == 0;
 }
 ```
+
 pop函数
+
 ```c
 void heappop(heap* hp) {
 	assert(hp);
@@ -158,6 +162,7 @@ void heappop(heap* hp) {
 	adjustdown(hp->arr, hp->size, 0);
 }
 ```
+
 将弹出的数据与最后一个下标交换，然后使用向下调整即可。
 # 🏏topk问题
 topk问题的本质就是筛选出一组数据中最大或最小的前k个。
@@ -215,7 +220,7 @@ for (int i = 1; i < k; ++i)
 	// 建堆 -- 向下调整建堆 -- O(N)
 	for (int i = (n - 1 - 1) / 2; i >= 0; --i)
 	{
-		adjustdown(a, n, i);
+		adjustdown(a, i, n);
 	}
 ```
 那么此时出现了问题，如果我们需要的是一个`升序序列`，那应该建大堆还是小堆呢？
@@ -227,7 +232,7 @@ int end = n - 1;
 	while (end > 0)
 	{
 		swap(&a[end], &a[0]);
-		adjustdown(a, end, 0);
+		adjustdown(a, 0, end);
 
 		--end;
 	}
