@@ -159,16 +159,90 @@ quick_sort(l,j) ,quick_sort(j+1,r)
 一定要熟记上面的规律。
 
 ## 🍰非递归实现快排
-还有一种快速排序,是`非递归`的形式来实现的.
+还有一种快速排序,是`非递归`的形式来实现的。为什么在这里要提一下非递归呢，因为不管是什么递归，都是`存在缺陷`的。如果递归的`深度过深`，就会造成`栈溢出`的情况。所以我们可能会遇到将递归转换为非递归的情况。快排的非递归可以借助`栈`来实现，先将`right和left`一起入栈，然后弹出，`先后`入`右左`两个区间的值，入栈和出栈的顺序非常重要，一定要考虑清楚，是先排序左边还是先排序右边。若是要先排序`左边`，那就要先入`右边`，因为栈遵循着`先入后出`的原则。
+
+```c
+typedef struct stack
+{
+	int* arr;
+	int size;
+	int capacity;
+}st;
+void stackinit(st* q) {
+	q->arr = (int*)malloc(sizeof(int) * 4);
+	q->size = 0;
+	q->capacity = 4;
+}
+void stackpush(st* q, int x) {
+	if (q->capacity == q->size) {
+		int* new = (int*)realloc(q->arr, q->capacity * 2);
+		if (new == NULL)
+			perror("realloc fail\n");
+		q->arr = new;
+		q->capacity *= 2;
+	}
+	q->arr[q->size++] = x;
+
+}
+//弹出时顺便取得这个值
+int stackpop(st* q) {
+	assert(q);
+	assert(q->size != 0);
+	return q->arr[--q->size];
+}
+bool stackisempty(st* p) {
+	return p->size == 0;
+}
+int _quicksort(int* a,int left,int right) {
+	if (left >= right)
+		return;
+	int key = a[left + right >> 1];
+	int l = left - 1;
+	int r = right + 1;
+	while (l < r) {
+		do { l++; } while (a[l] < key);
+		do { r--; } while (a[r] > key);
+		if (l < r)
+			swap(&a[l], &a[r]);
+	}
+	return r;
+}
+
+
+void quicksortnonr(int* a,int left,int right) {
+	st s;
+	stackinit(&s);
+	stackpush(&s, right);
+	stackpush(&s, left);
+	while (!stackisempty(&s)) {
+		int begin = stackpop(&s);
+		int end = stackpop(&s);
+		int key = _quicksort(a, begin, end);
+		if (key + 1 < end) {
+			stackpush(&s, end);
+			stackpush(&s,key+1 );
+		}
+		if (begin + 1 < key) {
+			stackpush(&s, key-1);
+			stackpush(&s, begin);
+		}
+
+	}
+}
+```
+注意，在 _quicksort函数中`返回的值`非常重要，与下面的quicksortnonr函数中的stackpush是有联系的！因为我的模版是分为（left，r）与（r+1，right），所以我返回的是r。一定不要忽略这些细节，边界的控制在这里显得尤其重要。
 
 # 🔔归并排序
+
+## 💻模版
 归并排序的思想也是`分治`。
-第一步仍然是取一个分界点，第二步就是将这个数组分为两个数组，第三步，对两个数组分别进行排序。
+先取一个分界点，再将这个数组以分界点分为两个数组，不断重复直到`不可分`，第三步，对两个数组分别进行排序，不断的向上拼接。
 当然，当数组只有一个数就直接返回即可，因为此时不需要进行排序。
-归并，字面意思理解就是`合二为一`，不断的通过递归，将`小数组变成有序数组`，再不断通过递归返回，将有序数组的长度越拼接越大，直到拼完整个数组。
-
+归并，字面意思理解就是`合二为一`，不断的通过递归，将`数组进行拆解`，再不断通过返回，将有序数组的长度越拼接越大(拼接的时候也要将两个有序数组排序)，直到拼完整个数组。
+<img src='https://img-blog.csdnimg.cn/5a101d5bcdaf4ce2826741f3e691bb7b.gif#pic_center'>
+其时间复杂度为`O(n*logn)`，因为其递归的深度为logn，每一层都要将n个数进行排序。
+假设需要排序的数组有`8个元素`，那么只需要递归`三层`即可，因为三层会被分为4组，每组两个，两两排序，就会组成最小的四个有序数组，再往上返回进行拼接即可，且每一层8个数都会进行排序。
 其模板如下：
-
 ```c
 void mergesort(int* arr,int l,int r){
     if(l>=r)
@@ -236,7 +310,6 @@ void mergesort(int* arr,int l,int r){
 <img src='https://imgbed.link/file/18079'>
 在此基础上不断的进行二分，缩小数组的查找区间。这就是二分的基本思路。
 以下是给出的代码模板。
-
 ```c++
 bool check(int x) {/* ... */} // 检查x是否满足某种性质
 
@@ -302,7 +375,6 @@ int bsearch_2(int l, int r)
 
 本题的核心思想就是寻找`特定数字的起始与终止坐标`，那么就需要利用到上面讲的两种区间了，蓝色的可以找到终止，红色的可以找到起始。不要将二分只是局限于寻找一个值，你可以利用check函数寻找到满足某个条件的`临界点`。
 代码如下：
-
 ```c
 #include<stdio.h>
 int check1(int *arr,int num,int q){
