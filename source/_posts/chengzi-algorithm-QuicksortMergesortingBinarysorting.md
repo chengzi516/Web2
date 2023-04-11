@@ -101,6 +101,7 @@ int quickSort(int* a, int left, int right) {
  上述的方法是hoare的基础版本,经过了一些小优化所得到的,其中很多地方都蕴含着坑,只要稍微写错了一点都会引发bug.
  ## 🌯改良的算法模板
  我个人更推荐采用如下的算法模板，直接取中，显得更加简洁,且更易记住,多写几遍即可。
+ 
  ```c
  void quick_sort(int* arr, int l, int r) {
   if(l>=r)
@@ -239,10 +240,11 @@ void quicksortnonr(int* a,int left,int right) {
 先取一个分界点，再将这个数组以分界点分为两个数组，不断重复直到`不可分`，第三步，对两个数组分别进行排序，不断的向上拼接。
 当然，当数组只有一个数就直接返回即可，因为此时不需要进行排序。
 归并，字面意思理解就是`合二为一`，不断的通过递归，将`数组进行拆解`，再不断通过返回，将有序数组的长度越拼接越大(拼接的时候也要将两个有序数组排序)，直到拼完整个数组。
-<img src='https://img-blog.csdnimg.cn/5a101d5bcdaf4ce2826741f3e691bb7b.gif#pic_center'>
+<img src='https://imgbed.link/file/21638'>
 其时间复杂度为`O(n*logn)`，因为其递归的深度为logn，每一层都要将n个数进行排序。
 假设需要排序的数组有`8个元素`，那么只需要递归`三层`即可，因为三层会被分为4组，每组两个，两两排序，就会组成最小的四个有序数组，再往上返回进行拼接即可，且每一层8个数都会进行排序。
 其模板如下：
+
 ```c
 void mergesort(int* arr,int l,int r){
     if(l>=r)
@@ -277,6 +279,62 @@ void mergesort(int* arr,int l,int r){
 
 边界划分的问题大多都可以这样思考，可以规避掉很多的问题。
 
+## 😍归并排序的非递归写法
+
+归并排序其实就是在不断的将数组`折半处理`，那么直接用循环就可以解决问题。只是当数组为奇数个时，就需要对循环中的一些值进行修正即可。
+同时，这里选择的非递归循环是从`底层`进行的，意思就是，先将两个两个的进行排序，再排四个四个的·····，直到排序完整个数组。
+
+```c
+//使用非递归来实现归并排序
+void mergesortnonr(int* a, int numsize) {
+	/*mergesort(a, left, mid);
+	mergesort(a, mid + 1, right);*/
+	int gap = 1;
+	while (gap < numsize) {
+		for (int q = 0; q <numsize; q += 2 * gap) {
+			int begin = q;//记录一下此时的数组开始下标
+			int i = q;
+			int j= q + gap;
+			int iend=q+gap-1;
+			int jend = q + 2 * gap - 1;  //jend就是此时数组的结束下标
+			//对越界的情况进行一个修正
+			if (iend >= numsize || j >= numsize) //iend越过了数组边界或者j越过了数组边界，二者是一种情况
+			{
+				break;
+			}
+
+			if (jend >= numsize)  //jend越过了数组边界
+			{
+			  	jend = numsize - 1;   //手动修正到边界上来
+			}
+			//开辟一个新数组来进行排序
+			int tmp[1000];
+			int k = 0; //k是他的下标
+			
+			while (i <= iend && j <= jend) {
+				if (a[i] > a[j])
+					tmp[k++] = a[j++];
+				else
+					tmp[k++] = a[i++];
+			}
+			//处理可能剩下来的两个数组中的一个
+			while (i <= iend) tmp[k++] = a[i++];
+			while (j <= jend) tmp[k++] = a[j++];
+			//进行拷贝
+			for (int i =begin , k = 0; i <= jend; i++, k++) {  //i必须等于l，因为是从l开始拷贝，而不是0
+				a[i] = tmp[k];
+			}
+		}
+		gap *= 2;
+	}
+}
+```
+这里用到了`gap`来表示当前排序的个数，从1开始，不断的乘以2即可。同时，在这里放弃了mid的写法，因为在递归写法中，right是已知的，在不断的建立的`栈帧`中传递的就是right和left的值，但是当我们放弃了递归，那就意味着`right的值将不再可以存储`，所以我就直接新增了iend与jend作为i与j的结束。
+还有一点就是函数的修正，不断的乘以2下势必会造成越界的情况，那么可以分为两种越界情况：
+1. iend越界与j越界，这两种可以归为一种，因为不管是里面的哪一种，都代表此时`不需要进行两个区间的归并`。
+2. jend越界，直接将jend置为数组的`最大下标`即可。
+3. 
+
 ##  🤠利用归并排序求逆序对的数量
 这是一道很经典的题。
 给定一个长度为 n的整数数列，请你计算数列中的逆序对的数量。
@@ -310,6 +368,7 @@ void mergesort(int* arr,int l,int r){
 <img src='https://imgbed.link/file/18079'>
 在此基础上不断的进行二分，缩小数组的查找区间。这就是二分的基本思路。
 以下是给出的代码模板。
+
 ```c++
 bool check(int x) {/* ... */} // 检查x是否满足某种性质
 
