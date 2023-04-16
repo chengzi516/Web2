@@ -1,6 +1,6 @@
 ---
 title: 【java】以简单的图书管理系统讲清楚类，对象，继承，多态与接口的相关知识点
-cover: https://imgbed.link/file/17521
+cover: https://tuchuang-1317757279.cos.ap-chengdu.myqcloud.com/%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1.jpg
 tags:
   - java
 abbrlink: f39d0df0

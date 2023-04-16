@@ -1,6 +1,6 @@
 ---
 title: 【leetcode】设计循环队列
-cover: https://imgbed.link/file/17519
+cover: https://tuchuang-1317757279.cos.ap-chengdu.myqcloud.com/1610173947-QjrHlC-LeetCode.png
 abbrlink: a256b950
 tags:
   - 刷题

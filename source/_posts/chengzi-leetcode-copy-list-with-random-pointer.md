@@ -1,6 +1,6 @@
 ---
 title: 【leetcode】巧解深度拷贝“带随机指针”的链表
-cover: https://imgbed.link/file/17520
+cover: https://tuchuang-1317757279.cos.ap-chengdu.myqcloud.com/1610173947-QjrHlC-LeetCode.png
 tags:
   - 刷题
   - c语言

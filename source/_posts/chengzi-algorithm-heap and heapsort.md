@@ -1,6 +1,6 @@
 ---
 title: 【算法】堆和堆排序
-cover: https://imgbed.link/file/18081
+cover: https://www.runoob.com/wp-content/uploads/2020/09/heap-01.png
 tags:
   - 算法
   - c语言

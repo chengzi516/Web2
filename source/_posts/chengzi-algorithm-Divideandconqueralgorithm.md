@@ -1,6 +1,6 @@
 ---
 title: 【算法】链式二叉树里的遍历与分治思想
-cover: https://imgbed.link/file/19941
+cover: https://images.xiaozhuanlan.com/photo/2019/fa65550a2db8de371ee88581d7fa24f1.gif
 tags:
 - 算法
 - 二叉树
@@ -53,9 +53,10 @@ btnode* creatnode(int x) {
 <img src='https://imgbed.link/file/20653'>
 得到的遍历结果就是
 1->3->7->4->5->6->7
-<img src='https://img-blog.csdnimg.cn/20200302091711281.png'>
+<img src='https://tuchuang-1317757279.cos.ap-chengdu.myqcloud.com/%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86.png'>
 因为是链式存储，所以在此处可以用到队列的思想，先将根节点入队，然后入左孩子，右孩子，再弹出根节点，此时左孩子就是队头，入队左孩子的两个孩子，再弹出左孩子······这样就可以实现层序遍历了。如果是数组型的二叉树，直接挨个访问下标即可。
 代码实现如下：
+
 ```c
 void levelorder(btnode* root) {
 	assert(root);

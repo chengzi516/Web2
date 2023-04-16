@@ -1,6 +1,6 @@
 ---
 title: 【c】为啥有时传参要传指针？实参形参到底是个啥？栈帧和他俩到底啥关系？
-cover: https://imgbed.link/file/17551
+cover: https://imgbed.link/file/17393
 tags:
   - c语言
   - 指针

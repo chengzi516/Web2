@@ -1,6 +1,6 @@
 ---
 title: 【算法】快速排序，归并排序，两种二分的模板干货讲解，附带边界问题的分析。
-cover: https://imgbed.link/file/19737
+cover: https://imgbed.link/file/21637
 tags:
   - 算法
   - c++

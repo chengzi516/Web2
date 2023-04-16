@@ -1,6 +1,6 @@
 ---
 title: 【算法】插入排序与希尔排序的一些理解
-cover: 'https://imgbed.link/file/21222'
+cover: 'https://www.runoob.com/wp-content/uploads/2019/03/insertionSort.gif'
 abbrlink: 1000f306
 date: 2023-03-31 17:18:47
 updated: 2023-03-31 17:18:47

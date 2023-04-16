@@ -1,6 +1,6 @@
 ---
 title: 【c】关于指针，你应该知道这些
-cover: https://imgbed.link/file/19538
+cover: https://tuchuang-1317757279.cos.ap-chengdu.myqcloud.com/%E6%8C%87%E9%92%88-2.jpg
 tags:
   - c语言
   - 指针
