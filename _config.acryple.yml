@@ -11,7 +11,7 @@ menu:
     标签: /tags/ || fas fa-tags
   github: https://github.com/chengzi516  ||   fab fa-github
   ChatGpt: https://pandapy.com/ ||  fa fa-toggle-on
-  图床: https://smms.app/ || fa fa-camera
+  #图床: https://smms.app/ || fa fa-camera
   #本站 || fa fa-sitemap:
     #说说: /speaks/ || fa fa-comments
     #友链: /links/ || fas fa-link

@@ -1,18 +1,19 @@
 ---
 title: 【c++】c++支持的引用和c中的指针孰胜孰劣？
-cover: 'https://tuchuang-1317757279.cos.ap-chengdu.myqcloud.com/%E5%BC%95%E7%94%A8-5.png'
+cover: >-
+  https://tuchuang-1317757279.cos.ap-chengdu.myqcloud.com/%E5%BC%95%E7%94%A8-5.png
+tags:
+  - c++
+  - 引用
+categories:
+  - c/c++
+swiper_index: 15
+abbrlink: 1bf63345
 date: 2023-04-18 16:41:33
 updated: 2023-04-18 16:41:33
-tags:
-- c++
-- 引用
-categories:
-- c/c++
-
-swiper_index: 15
 ---
 
-> 前言： 最近学到了c++中的引用一章，发现引用和c中所学到的指针有着很相似的效果，但c++中仍然有着指针的一席之地，想必二者的适用场景是各有千秋，于是查阅资料，写了此文来方便日后复习。
+> 前言： 最近学到了c\++中的引用一章，发现引用和c中所学到的指针有着很相似的效果，但在c\++中仍然有着指针的一席之地，想必二者的适用场景是各有千秋，于是查阅资料，写了此文来方便日后复习。
 
 # 🍐引用的基本知识
 ## 🍊概念
