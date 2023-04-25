@@ -76,11 +76,11 @@ katex:
 # --------------------------------------
 
 # Favicon（網站圖標）
-favicon: /img/favicon.png
+favicon: https://tuchuang-1317757279.cos.ap-chengdu.myqcloud.com/%E5%B0%8F%E7%8B%BC1.jpeg
 
 # Avatar (頭像)
 avatar:
-  img: https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png
+  img: https://tuchuang-1317757279.cos.ap-chengdu.myqcloud.com/%E5%B0%8F%E7%8B%BC1.jpeg
   effect: false
 
 # Disable all banner image
