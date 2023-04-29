@@ -9,7 +9,7 @@ tags:
 swiper_index: 10
 description: 填上一篇的层序遍历的坑。
 categories:
-  - 算法
+  - 数据结构与算法
 abbrlink: 84c9fbe7
 date: 2023-03-31 10:51:47
 ---

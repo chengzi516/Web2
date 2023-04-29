@@ -8,7 +8,7 @@ tags:
 - c语言
 swiper_index: 8
 categories: 
-- 算法 
+- 数据结构与算法
 abbrlink: da3f1096
 date: 2023-03-26 12:43:26
 ---
