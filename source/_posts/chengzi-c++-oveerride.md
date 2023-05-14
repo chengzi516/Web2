@@ -1,15 +1,16 @@
 ---
 title: 【c++】相较于c，c++是如何支持重载的？
 cover: 'https://tuchuang-1317757279.cos.ap-chengdu.myqcloud.com/c++.png'
+tags:
+  - c++
+  - 函数重载
+  - 编译
+categories:
+  - c/c++
+ai: ture
+abbrlink: a247a9ac
 date: 2023-04-23 11:38:01
 updated: 2023-04-23 11:38:01
-tags: 
-- c++
-- 函数重载
-- 编译
-categories:
-- c/c++
-ai: ture
 ---
 
 

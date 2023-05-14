@@ -1,13 +1,14 @@
 ---
 title: 【c++】初始化列表是怎么个事
-date: 2023-05-12 13:33:58
 tags:
-- c++
-- 成员函数
-categories: 
-- c/c++
-cover: https://tuchuang-1317757279.cos.ap-chengdu.myqcloud.com/c++.png 
+  - c++
+  - 成员函数
+categories:
+  - c/c++
+cover: 'https://tuchuang-1317757279.cos.ap-chengdu.myqcloud.com/c++.png'
 ai: ture
+abbrlink: 6aaf009f
+date: 2023-05-12 13:33:58
 ---
 
 > 在之前的成员函数一文中谈到过构造函数，在创建对象时，编译器会调用构造函数，为成员变量进行赋值。但这个操作`并不是初始化`，初始化只能有`一次`，而在构造函数里面是可以进行多次赋值的。初始化的工作通常可以交由初始化列表来执行。

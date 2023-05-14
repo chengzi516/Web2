@@ -1,13 +1,15 @@
 ---
 title: 【牛客】与时间相关的程序设计题目
-date: 2023-05-11 16:29:02
-tags: 
-- 牛客网
-- c++
+tags:
+  - 牛客网
+  - c++
 categories:
-- 刷题
+  - 刷题
 ai: ture
-cover: https://tuchuang-1317757279.cos.ap-chengdu.myqcloud.com/%E7%89%9B%E5%AE%A2%E7%BD%91.png
+cover: >-
+  https://tuchuang-1317757279.cos.ap-chengdu.myqcloud.com/%E7%89%9B%E5%AE%A2%E7%BD%91.png
+abbrlink: 6b9566f5
+date: 2023-05-11 16:29:02
 ---
 
 > 本篇一共有四道来自牛客网的关于日期计算的题目。

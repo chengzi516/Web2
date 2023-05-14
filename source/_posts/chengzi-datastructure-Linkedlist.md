@@ -1,14 +1,16 @@
 ---
 title: 【数据结构】单链表的实现
-date: 2023-05-02 13:42:51
 tags:
-- 链表
-- 数据结构
-- c++
-categories: 
-- 数据结构与算法
-cover: https://tuchuang-1317757279.cos.ap-chengdu.myqcloud.com/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.jpg
+  - 链表
+  - 数据结构
+  - c++
+categories:
+  - 数据结构与算法
+cover: >-
+  https://tuchuang-1317757279.cos.ap-chengdu.myqcloud.com/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.jpg
 ai: ture
+abbrlink: 1ec8860c
+date: 2023-05-02 13:42:51
 ---
 
 
