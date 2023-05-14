@@ -1,6 +1,6 @@
 ---
 title: 【算法】快速排序，归并排序，两种二分的模板干货讲解，附带边界问题的分析。
-cover: https://imgbed.link/file/21637
+cover: https://tuchuang-1317757279.cos.ap-chengdu.myqcloud.com/%E7%AE%97%E6%B3%95.png
 tags:
   - 算法
   - c++
@@ -10,7 +10,7 @@ swiper_index: 5
 categories: 
 - 数据结构与算法
 date: 2023-03-07 22:32:08
-
+ai: ture
 ---
 >前言：本篇内容会总结快速排序与归并排序两种常见的排序以及整数二分，浮点数二分，并给出相应的模板代码与示例题目。在代码的讲解过程中也会附带讲解让人头疼的边界问题，到底如何划分区间，划分后又该如何设定参数。
 

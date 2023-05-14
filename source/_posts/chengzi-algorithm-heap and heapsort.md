@@ -1,6 +1,6 @@
 ---
 title: 【算法】堆和堆排序
-cover: https://www.runoob.com/wp-content/uploads/2020/09/heap-01.png
+cover: https://tuchuang-1317757279.cos.ap-chengdu.myqcloud.com/%E7%AE%97%E6%B3%95.png
 tags:
   - 算法
   - c语言
@@ -11,6 +11,7 @@ swiper_index: 6
 categories: 
 - 数据结构与算法 
 date: 2023-03-21 21:44:28
+ai: ture
 ---
 # 📲堆
 

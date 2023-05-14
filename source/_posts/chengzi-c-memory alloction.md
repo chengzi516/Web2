@@ -1,6 +1,6 @@
 ---
 title: 【c】简述内存中数据如何存储？动态内存该如何分配？
-cover: https://imgbed.link/file/15192
+cover: https://tuchuang-1317757279.cos.ap-chengdu.myqcloud.com/c.png
 tags:
   - c语言
   - 动态内存分配
@@ -8,6 +8,7 @@ abbrlink: f2154748
 date: 2023-03-03 09:55:42
 categories: 
 - c/c++
+ai: ture
 ---
 > 😍在本章的内容里会详细的介绍在c语言的程序中，整型int与浮点型float是如何进行存储的，以及动态分配的一些基础知识点。
 
